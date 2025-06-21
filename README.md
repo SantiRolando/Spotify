@@ -1,107 +1,83 @@
-Espotify 🎵
-Tecnólogo en Informática – Maldonado, Uruguay
-Curso: Programación de Aplicaciones – 2024
+# Espotify 🎵
 
-Introducción
-Espotify es un sistema de streaming y almacenamiento de música en línea diseñado como proyecto final del curso. Permite a usuarios suscribirse, buscar canciones, artistas y álbumes, reproducir y descargar música en diversos dispositivos. Además, ofrece funciones tipo red social: creación de playlists, recomendaciones personalizadas, rankings y la posibilidad de compartir preferencias con otros usuarios. Artistas y discográficas podrán gestionar su catálogo, mientras que los administradores cuentan con una interfaz dedicada para la gestión global del sistema.
+**Tecnólogo en Informática – Maldonado, Uruguay**  
+**Curso: Programación de Aplicaciones – 2024**
 
-Objetivos del Curso
-Uso avanzado de herramientas conceptuales orientadas a objetos para análisis y diseño de software.
+---
 
-Aplicación práctica de una metodología de desarrollo (iterativa e incremental).
+## 🧩 Introducción
 
-Detección y resolución de problemas comunes en proyectos de software.
+Espotify es una plataforma de streaming y almacenamiento de música en línea. Permite a los usuarios suscribirse, buscar canciones, artistas y álbumes, reproducir y descargar música en múltiples dispositivos. Además, incluye funciones de red social: creación de playlists, recomendaciones adaptadas, rankings y opciones para compartir gustos con otros usuarios. Artistas y discográficas pueden gestionar su catálogo, y los administradores cuentan con una interfaz gráfica exclusiva para la gestión del sistema.
 
-Introducción y profundización en un lenguaje de programación orientado a objetos (Java).
+---
 
-Arquitectura del Sistema
-El diseño propuesto incluye cuatro componentes principales y dos servidores:
+## 🎯 Objetivos del Proyecto
 
-Servidor Central
+- Explorar herramientas conceptuales orientadas a objetos para el análisis y diseño de software.
+- Aplicar una metodología de desarrollo iterativa e incremental.
+- Identificar y solucionar problemas comunes en sistemas de software.
+- Dominar un lenguaje de programación orientado a objetos: **Java**.
 
-Lógica y datos centrales (catálogo, usuarios, artistas, etc.)
+---
 
-Exposición de servicios mediante Web Services en Java EE.
+## 🌐 Arquitectura del Sistema
 
-Interface gráfica de gestión con Swing (solo para administradores).
+1. **Servidor Central**  
+   - Almacena la lógica del negocio y los datos (usuarios, catálogo, artistas).  
+   - Expone Web Services (Java EE) para conexión con otros componentes.  
+   - Interfaz gráfica de administración con **Swing** (solo administradores).
 
-Servidor Web
+2. **Servidor Web**  
+   - Sirve páginas web y recursos estáticos (HTML, CSS, JS).  
+   - Consume Web Services del Servidor Central.  
+   - Implementado con **Servlets** y **JSP** sobre **Apache Tomcat**.
 
-Publica la capa web (sitio, JS, CSS, imágenes).
+3. **Cliente Web**  
+   - Navegador estándar que interactúa con el Servidor Web.
 
-Consume los Web Services del Servidor Central.
+4. **Dispositivo Móvil**  
+   - App nativa o web móvil que consume funcionalidades vía Web Services.
 
-Implementado con Servlets y JSP sobre Apache Tomcat.
+---
 
-Cliente Web
+## 🔄 Proceso de Desarrollo
 
-Navegador estándar que consume la web y funcionalidades del Servidor Web.
+El proyecto se divide en tres iteraciones (más una cuarta fuera de alcance del curso):
 
-Dispositivo Móvil
+- **Tarea 1 (5 semanas):**  
+  - Desarrollo del Servidor Central con interfaz **Swing** y base de datos local.  
+  - Enfoque administrativo sin accesos de clientes o artistas.
 
-App nativa o web móvil que consume funcionalidades del Servidor Central (Web Services).
+- **Tarea 2 (4 semanas):**  
+  - Desarrollo del Servidor Web (Servlets + JSP).  
+  - Funcionalidades web sin distribución física.
 
-Proceso de Desarrollo
-El desarrollo se realiza en tres iteraciones, seguidas de una cuarta etapa de despliegue (fuera de alcance del curso):
+- **Tarea 3 (3 semanas):**  
+  - Implementación de Web Services y despliegue físico distribuido.  
+  - Extensión de funcionalidades web y desarrollo móvil básico.
 
-Iteración 1 (5 semanas):
+---
 
-Servidor Central + GUI Swing + persistencia en base de datos.
+## 🛠 Tecnologías Utilizadas
 
-Enfoque administrativo sin acceso de clientes o artistas.
+- **Java SE 8**:  
+  - Lambda, Stream API, Date/Time API, Optional, default & static methods en interfaces :contentReference[oaicite:1]{index=1}
 
-Iteración 2 (4 semanas):
+- **Java EE**:  
+  - **Web Services**, **Servlets** y **JSP** para lógica distribuida :contentReference[oaicite:2]{index=2}
 
-Desarrollo del Servidor Web con lógica local (JSP + Servlets).
+- **Apache Tomcat (v9+)**:  
+  - Implementa Servlet 4.0 y JSP 2.3 para ejecución en servidor web :contentReference[oaicite:3]{index=3}
 
-Primera versión de acceso web sin distribución física.
+- **Swing**:  
+  - Framework Java para interfaz gráfica de administración.
 
-Iteración 3 (3 semanas):
+- **Base de datos relacional** (MySQL/PostgreSQL).
 
-Distribución física real (Web Services entre nodos).
+- **Metodología iterativa e incremental**:  
+  - Ciclos de análisis, diseño, implementación y verificación.
 
-Extensión de funcionalidades web y despliegue en móvil básico.
+---
 
-Tecnologías Utilizadas
-Java SE 8
-
-Lambda expressions, Stream API, Date/Time API, interfaces por defecto, Optional, entre otros 
-de.wikipedia.org
-docs.oracle.com
-+2
-tomcat.apache.org
-+2
-blogs.oracle.com
-+2
-tpointtech.com
-+11
-geeksforgeeks.org
-+11
-javaguides.net
-+11
-
-Java EE (Servlets, JSP, Web Services)
-
-Implementación de lógica empresarial distribuida.
-
-Apache Tomcat
-
-Servidor de aplicaciones: versión estable 9.x o superior (Java EE 8+) 
-tomcat.apache.org
-+1
-tomcat.apache.org
-+1
-
-Swing
-
-Framework de escritorio para la interfaz administrativa.
-
-Persistencia de datos
-
-Base de datos relacional (MySQL, PostgreSQL o similar, a especificar).
-
-Metodología Iterativa e Incremental
-
-Basada en UML, patrones, con ciclos de análisis, diseño, implementación y verificación por iteración.
-
+## 📁 Estructura del Repositorio
 
